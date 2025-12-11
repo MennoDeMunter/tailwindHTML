@@ -73,3 +73,18 @@ body { padding-bottom: var(--site-footer-height); }
     backdrop-filter: blur(4px);
     border-top: 1px solid rgba(148,227,227,0.06);
 }
+
+/* small back button used in the footer on every page */
+.footer-back {
+    background: transparent;
+    border: 1px solid rgba(148,227,227,0.08);
+    color: inherit;
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    margin-right: 0.5rem;
+}
+.footer-back:hover {
+    background: rgba(148,227,227,0.02);
+}
