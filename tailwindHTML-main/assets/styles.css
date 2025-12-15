@@ -240,6 +240,13 @@ main.max-w-4xl p { color: #5a463d; line-height:1.7; }
     }
 }
 
+/* helper class to force the start-screen brown on specific pages */
+.site-brown { background-color: var(--start-bg) !important; color: var(--start-text) !important; }
+
+/* ensure elements that relied on .bg-white remain parchment when used inside content cards */
+.site-brown .bg-white { background-color: #fffaf6 !important; }
+.site-brown .bg-gray-50 { background-color: #fbf7f2 !important; }
+
 /* ensure footer space still respected on hero */
 .hero:after { content: ''; display:block; height: var(--site-footer-height); }
 
