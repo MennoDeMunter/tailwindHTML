@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tailwind Fonts Overview</title>
+  <link href="./dist/output.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="assets/flexboxes.css">
+  <link rel="stylesheet" href="assets/nav.css">
+  <link rel="stylesheet" href="assets/typography.css">
+</head>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Week 1 — LogBoek</title>
+
+        <!-- Tailwind CDN (development) -->
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <link rel="stylesheet" href="assets/styles.css">
+        <link rel="stylesheet" href="assets/flexboxes.css">
+        <link rel="stylesheet" href="assets/nav.css">
+        <link rel="stylesheet" href="assets/typography.css">
+    </head>
+    <body class="bg-white text-teal-300 min-h-screen">
+        <main class="max-w-4xl mx-auto p-6">
+            <a href="index.html" class="inline-block mb-6 text-teal-600 font-semibold">← homepage</a>
+            <a href="week2.html" class="next-button" aria-label="Volgende week">Volgende →</a>
+
+            <h1 class="text-3xl font-extrabold mb-2">Mijn ervaring week 1.</h1>
+            <h2 class="text-xl text-gray-700 mb-4">opdracht briefing</h2>
+            <p class="text-gray-600 mb-6">Tijdens de eerste week van mijn bachelorproef merkte ik dat mijn opstart trager verliep dan gepland. Ik heb in deze periode nog niet veel kunnen uitwerken in het procesdocument en ook mijn eerste stappen in Figma bleven beperkt. Dit kwam voornamelijk doordat ik nog zoekende was naar een duidelijke richting voor mijn project en tijd nodig had om de verwachtingen en doelen scherp te krijgen.
+
+Hoewel de voortgang in week 1 minimaal was, heeft dit me wel inzicht gegeven in het belang van een gestructureerde aanpak. Vanaf week 2 ben ik daarom bewust meer planning en regelmaat beginnen inbouwen, zodat het proces efficiënter en consistenter verloopt.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-gray-50 p-4 rounded shadow-sm">
+                    <p class="text-gray-700">/* content column 1 */</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded shadow-sm">
+                    <p class="text-gray-700">/* content column 2 */</p>
+                </div>
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <button type="button" class="footer-back" onclick="history.back()" aria-label="Ga terug">← terug</button>
+            Menno De Munter — <a href="https://mennodemunter-ontwerpdocumentatie.netlify.app/" target="_blank" rel="noopener noreferrer" class="text-teal-300 hover:underline ml-3">GitHub</a>
+        </footer>
+        <script src="assets/modal.js" defer></script>
+    </body>
+</html>

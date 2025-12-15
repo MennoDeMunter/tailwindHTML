@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>LogBoek — HTML & CSS</title>
+
+        <!-- Tailwind CDN (development) -->
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <!-- keep your local CSS for custom fonts / fallbacks -->
+        <link rel="stylesheet" href="assets/styles.css">
+        <link rel="stylesheet" href="assets/flexboxes.css">
+        <link rel="stylesheet" href="assets/nav.css">
+        <link rel="stylesheet" href="assets/typography.css">
+    </head>
+    <body class="bg-white text-teal-300 min-h-screen">
+
+        <!-- Hero layout (spicers-inspired) -->
+        <header>
+            <!-- Weeks carousel (small top nav) -->
+            <nav aria-label="Weeks" class="weeks-top" role="navigation">
+                <div class="weeks-viewport">
+                    <div id="weeks-track" class="weeks-track" role="list">
+                        <a role="listitem" href="week1.html" class="week-tile">week1</a>
+                        <a role="listitem" href="week2.html" class="week-tile">week2</a>
+                        <a role="listitem" href="week3.html" class="week-tile">week3</a>
+                        <a role="listitem" href="week4.html" class="week-tile">week4</a>
+                        <a role="listitem" href="week5.html" class="week-tile">week5</a>
+                        <a role="listitem" href="week6.html" class="week-tile">week6</a>
+                        <a role="listitem" href="week7.html" class="week-tile">week7</a>
+                        <a role="listitem" href="week8.html" class="week-tile">week8</a>
+                        <a role="listitem" href="week9.html" class="week-tile">week9</a>
+                        <a role="listitem" href="week10.html" class="week-tile">week10</a>
+                        <a role="listitem" href="week11.html" class="week-tile">week11</a>
+                        <a role="listitem" href="week12.html" class="week-tile">week12</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero">
+                <h1 class="hero-title">logboek<br>Lost in tra(i)nslation</h1>
+
+                <div class="hero-side">Menno De Munter</div>
+            </section>
+        </main>
+
+            <footer class="site-footer">
+                <button type="button" class="footer-back" onclick="history.back()" aria-label="Ga terug">← terug</button>
+                Menno De Munter — 
+                <a href="assets/Scherm­afbeelding 2025-12-04 om 16.52.34.png" download class="text-teal-300 hover:underline">download treinschermen</a>
+                —
+                <a href="https://github.com/MennoDeMunter/tailwindHTML" target="_blank" rel="noopener noreferrer" class="text-teal-300 hover:underline ml-3">GitHub</a>
+            </footer>
+
+            <!-- carousel behavior -->
+            <script src="assets/carousel.js" defer></script>
+            <!-- interactive gradient script (if present) -->
+            <script src="assets/gradient.js"></script>
+            <!-- image modal behavior -->
+            <script src="assets/modal.js" defer></script>
+        </body>
+    </html>
