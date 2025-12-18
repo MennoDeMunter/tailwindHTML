@@ -5,21 +5,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Week 6 — LogBoek</title>
 
-        <!-- Tailwind CDN (development) -->
-        <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Built Tailwind stylesheet -->
+    <link href="./dist/output.css" rel="stylesheet">
 
-        <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="assets/styles.css">
         <link rel="stylesheet" href="assets/flexboxes.css">
         <link rel="stylesheet" href="assets/nav.css">
         <link rel="stylesheet" href="assets/typography.css">
     </head>
-        <body class="bg-white text-teal-300 min-h-screen">
+    <body class="site-brown text-teal-300 min-h-screen">
             <main class="max-w-4xl mx-auto p-6">
             <a href="index.html" class="inline-block mb-6 text-teal-600 font-semibold">← homepage</a>
+            <a href="week8.html" class="next-button inline-block ml-auto bg-white text-gray-800 px-4 py-2 rounded shadow hover:bg-amber-50 transition-colors" aria-label="Volgende week">Volgende →</a>
 
             <h1 class="text-3xl font-extrabold mb-2">Mijn ervaring week 6.</h1>
             <h2 class="text-xl text-gray-700 mb-4">Chinees</h2>
-            <p class="text-gray-600 mb-6">"ik snap de les niet" deze tekst heb ik veranderd in week 1, ik snapte er niks van hoe ik de html site moest veranderen en het was volledig chinees voor mij.</p>
+            <p class="text-gray-600 mb-6">“Ik snap de les niet” was voor mij de beste samenvatting van hoe ik mij in week 1 voelde. Ik had geen idee hoe ik de HTML-site moest aanpassen, en veel van de uitleg kwam voor mij over als pure Chinees. Omdat alles nieuw was, had ik moeite om te begrijpen hoe de structuur werkte en welke stappen ik precies moest volgen. Deze verwarring maakte de start uitdagend.</p>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div class="bg-gray-50 p-4 rounded shadow-sm"><p class="text-gray-700">.</p></div>
@@ -28,8 +29,9 @@
         </main>
 
         <footer class="site-footer">
-            <button type="button" class="footer-back" onclick="history.back()" aria-label="Ga terug">← terug</button>
+            <button type="button" class="footer-back mr-4 text-sm text-gray-600 hover:text-gray-800" onclick="history.back()" aria-label="Ga terug">← terug</button>
             Menno De Munter — <a href="https://mennodemunter-ontwerpdocumentatie.netlify.app/" target="_blank" rel="noopener noreferrer" class="text-teal-300 hover:underline ml-3">GitHub</a>
         </footer>
+        <script src="assets/modal.js" defer></script>
     </body>
 </html>

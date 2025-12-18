@@ -25,8 +25,8 @@
   text-align: center;
   padding: 10px 12px;
   border-radius: 8px;
-  background: #00bcd4;
-  color: #ffffff;
+  background: linear-gradient(180deg, #fff8f2, #fff3ef);
+  color: var(--p-dark);
   text-decoration: none;
   cursor: pointer;
   font-family: inherit;
@@ -56,14 +56,15 @@
   flex: 0 0 auto;
   min-width: 120px;
   padding: 0.5rem 1rem;
-  background: #00bcd4;
-  color: #fff;
+  background: linear-gradient(180deg, #fff8f2, #fff3ef); /* warm pill */
+  color: var(--p-dark);
   border-radius: 0.5rem;
   text-align: center;
   font-weight: 600;
   text-decoration: none;
+  border: 1px solid rgba(0,0,0,0.04);
 }
-.week-tile:hover { background:#06aab7 }
+.week-tile:hover { background: linear-gradient(180deg, #fff3ef, #ffeae1); transform: translateY(-3px); box-shadow: 0 12px 30px rgba(59,43,32,0.08); }
 .carousel-control {
   position: absolute;
   top: 50%;
@@ -76,4 +77,4 @@
 .left-control { left: 0.25rem; }
 .right-control { right: 0.25rem; }
 .carousel-dot { width:10px; height:10px; border-radius:9999px; background:#d1d5db }
-.carousel-dot.active { background:#06b6d4 }
+.carousel-dot.active { background: var(--p-dark); }

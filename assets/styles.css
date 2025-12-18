@@ -2,15 +2,28 @@
 @import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 body{
-    background-color: rgb(255, 255, 255);
-    color: #94e3e3;
+    /* neutral palette */
+    background-color: #f5f3f2; /* warm off-white */
+    color: #222222; /* primary text */
     height:auto;
     min-height:100vh;
 }
 
 /* reserve space for footer so it doesn't cover content */
-:root { --site-footer-height: 3.5rem; }
-body { padding-bottom: var(--site-footer-height); }
+:root {
+    --site-footer-height: 3.5rem;
+    /* Neutral palette (from attachment) */
+    /* earthy palette */
+    --p-dark: #3B2B20;    /* deep espresso */
+    --p-mid:  #8B6B5A;    /* warm brown */
+    --p-light:#F3EFE9;    /* parchment */
+    --p-acc:  #B86B56;    /* terracotta accent */
+    /* start screen (index hero) colors */
+    --start-bg: var(--p-dark);
+    --start-text: #ffffff;
+}
+/* apply the neutral palette site-wide (overrides common Tailwind utilities below) */
+body { padding-bottom: var(--site-footer-height); background-color: var(--p-light); color: var(--p-dark); font-family: 'Montserrat', 'Roboto', sans-serif; }
 /* Container styling */
 .container {
     font-family: 'Roboto';
@@ -32,6 +45,10 @@ body { padding-bottom: var(--site-footer-height); }
     margin: 0;
     z-index: 50;
 }
+.site-tile{
+        color: #00bcd4
+
+}
 
 .vertical-buttons a {
     transition: background-color 0.3s ease, transform 0.2s ease;
@@ -42,11 +59,13 @@ body { padding-bottom: var(--site-footer-height); }
 }
 
 .picture-frame {
-    border: 8px solid #94e3e3;
+    border: 6px solid rgba(59,43,32,0.06);
     padding: 12px;
-    background-color: #f5f5f5;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fffaf6;
+    box-shadow: 0 12px 30px rgba(59,43,32,0.06);
     display: inline-block;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 .picture-frame img {
@@ -67,17 +86,17 @@ body { padding-bottom: var(--site-footer-height); }
     justify-content: center;
     text-align: center;
     padding: 0 1rem;
-    color: #94e3e3;
+    color: #6b4f43;
     font-size: 0.95rem;
-    background: rgba(255,255,255,0.02);
-    backdrop-filter: blur(4px);
-    border-top: 1px solid rgba(148,227,227,0.06);
+    background: linear-gradient(180deg, rgba(243,239,233,0.85), rgba(243,239,233,0.75));
+    backdrop-filter: blur(3px);
+    border-top: 1px solid rgba(59,43,32,0.06);
 }
 
 /* small back button used in the footer on every page */
 .footer-back {
     background: transparent;
-    border: 1px solid rgba(148,227,227,0.08);
+    border: 1px solid rgba(0,0,0,0.08);
     color: inherit;
     padding: 0.25rem 0.5rem;
     border-radius: 6px;
@@ -86,5 +105,196 @@ body { padding-bottom: var(--site-footer-height); }
     margin-right: 0.5rem;
 }
 .footer-back:hover {
-    background: rgba(148,227,227,0.02);
+    background: rgba(0,0,0,0.04);
 }
+
+/* neutralize some Tailwind utility classes so the neutral palette applies sitewide */
+.text-teal-300 { color: var(--p-mid) !important; }
+.text-teal-600 { color: var(--p-dark) !important; }
+.text-teal-700 { color: var(--p-dark) !important; }
+
+/* override common background utilities to fit the neutral tone */
+.bg-white { background-color: #fffaf6 !important; }
+.bg-gray-50 { background-color: #fbf7f2 !important; }
+.bg-gray-100 { background-color: #f5f1ec !important; }
+
+/* neutral link/accents fallback */
+.text-blue-600, .text-teal-500, .text-teal-400 { color: var(--p-acc) !important; }
+
+/* Next button used on week pages */
+.next-button {
+    display: inline-block;
+    margin-left: 0.75rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    background: #fff3ef;
+    color: var(--p-dark);
+    text-decoration: none;
+    border: 1px solid rgba(0,0,0,0.06);
+    font-weight: 600;
+}
+.next-button:hover { background: #ffe6df; }
+
+/* Hero layout inspired by spicers.jpg */
+.hero {
+    min-height: calc(100vh - var(--site-footer-height));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    /* dark brown start screen */
+    background: var(--start-bg);
+    color: var(--start-text);
+}
+
+.hero-image {
+    max-width: 46%;
+    width: 46%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    z-index: 10;
+}
+
+.hero-title {
+    position: absolute;
+    left: 6%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'BBH Sans Bogle', sans-serif;
+    font-size: clamp(3.5rem, 10vw, 8.5rem);
+    line-height: 0.9;
+    font-weight: 900;
+    text-transform: none;
+    color: var(--start-text);
+    z-index: 20;
+    letter-spacing: -0.03em;
+}
+
+.hero-side {
+    position: absolute;
+    right: -2rem;
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+    transform-origin: center;
+    font-family: 'BBH Sans Bogle', sans-serif;
+    font-size: clamp(1.25rem, 2.5vw, 2.5rem);
+    letter-spacing: 0.45rem;
+    color: var(--start-text);
+    z-index: 20;
+}
+
+/* Weeks carousel when used as a slim top nav */
+.weeks-top { position: absolute; top: 3rem; left: 50%; transform: translateX(-50%); z-index: 40; }
+/* bring pills a bit higher on very small screens */
+@media (max-width: 480px) {
+    .weeks-top { top: 2rem; }
+}
+.weeks-top .weeks-track { display:flex; gap:0.75rem; align-items:center; }
+/* make the top pills readable on the dark start screen */
+.weeks-top .week-tile { background: rgba(255,255,255,0.06); color: var(--start-text); padding: 0.15rem 0.6rem; min-width: auto; border-radius: 9999px; font-weight:600; text-transform: none; border: 1px solid rgba(255,255,255,0.06); }
+.weeks-top .week-tile:hover { background: rgba(255,255,255,0.12); transform: translateY(-2px); box-shadow: 0 8px 18px rgba(59,43,32,0.12); }
+
+/* Week pages: content card & enhanced headings */
+main.max-w-4xl {
+        background: linear-gradient(180deg, rgba(255,250,246,0.95), rgba(255,250,246,0.9));
+        border-radius: 12px;
+        padding: 2.5rem;
+        margin-top: 3.5rem;
+        box-shadow: 0 20px 50px rgba(59,43,32,0.06);
+        border-left: 8px solid var(--p-acc);
+}
+
+main.max-w-4xl h1 {
+        font-family: 'BBH Sans Bogle', sans-serif;
+        color: var(--p-dark);
+        font-size: clamp(1.75rem, 3.2vw, 2.8rem);
+        margin-bottom: 0.25rem;
+        position: relative;
+}
+main.max-w-4xl h1::after{
+        content: '';
+        display:block;
+        width: 56px;
+        height: 6px;
+        background: var(--p-acc);
+        margin-top: 0.6rem;
+        border-radius: 4px;
+}
+
+main.max-w-4xl h2 { color: #6b4f43; margin-bottom: 1rem; }
+main.max-w-4xl p { color: #5a463d; line-height:1.7; }
+
+/* image polish */
+.picture-frame { transition: transform .28s ease, box-shadow .28s ease; }
+.picture-frame:hover { transform: translateY(-6px) scale(1.02); box-shadow: 0 30px 70px rgba(59,43,32,0.12); }
+
+/* subtle textured background for large screens */
+@media (min-width: 900px){
+    body::before{
+        content: '';
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        background-image: radial-gradient(rgba(59,43,32,0.02) 1px, transparent 1px);
+        background-size: 20px 20px;
+        opacity: 0.35;
+        mix-blend-mode: multiply;
+    }
+}
+
+/* helper class to force the start-screen brown on specific pages */
+.site-brown { background-color: var(--start-bg) !important; color: var(--start-text) !important; }
+
+/* ensure elements that relied on .bg-white remain parchment when used inside content cards */
+.site-brown .bg-white { background-color: #fffaf6 !important; }
+.site-brown .bg-gray-50 { background-color: #fbf7f2 !important; }
+
+/* ensure footer space still respected on hero */
+.hero:after { content: ''; display:block; height: var(--site-footer-height); }
+
+/* Image modal (lightbox) */
+.image-modal-overlay {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.6);
+    z-index: 1000;
+    padding: 1.5rem;
+}
+.image-modal-overlay.show { display: flex; }
+.image-modal-content {
+    max-width: 100%;
+    max-height: 100%;
+    background: #fff;
+    border-radius: 10px;
+    padding: 0.5rem;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.image-modal-content img {
+    max-width: 90vw;
+    max-height: 80vh;
+    width: auto;
+    height: auto;
+    display:block;
+}
+.image-modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(255,255,255,0.9);
+    border: 1px solid rgba(0,0,0,0.06);
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+/* make images show a zoom cursor to hint interactivity */
+img { cursor: zoom-in; }
