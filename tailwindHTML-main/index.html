@@ -5,11 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>LogBoek — HTML & CSS</title>
 
-        <!-- Tailwind CDN (development) -->
-        <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Built Tailwind stylesheet -->
+    <link href="./dist/output.css" rel="stylesheet">
 
-        <!-- keep your local CSS for custom fonts / fallbacks -->
-        <link rel="stylesheet" href="assets/styles.css">
+    <!-- keep your local CSS for custom fonts / fallbacks (loaded after the built Tailwind file so small overrides can apply) -->
+    <link rel="stylesheet" href="assets/styles.css">
         <link rel="stylesheet" href="assets/flexboxes.css">
         <link rel="stylesheet" href="assets/nav.css">
         <link rel="stylesheet" href="assets/typography.css">
@@ -19,21 +19,24 @@
         <!-- Hero layout (spicers-inspired) -->
         <header>
             <!-- Weeks carousel (small top nav) -->
-            <nav aria-label="Weeks" class="weeks-top" role="navigation">
+            <nav aria-label="Weeks" class="weeks-top absolute top-12 left-1/2 transform -translate-x-1/2 z-40" role="navigation">
                 <div class="weeks-viewport">
                     <div id="weeks-track" class="weeks-track" role="list">
-                        <a role="listitem" href="week1.html" class="week-tile">week1</a>
-                        <a role="listitem" href="week2.html" class="week-tile">week2</a>
-                        <a role="listitem" href="week3.html" class="week-tile">week3</a>
-                        <a role="listitem" href="week4.html" class="week-tile">week4</a>
-                        <a role="listitem" href="week5.html" class="week-tile">week5</a>
-                        <a role="listitem" href="week6.html" class="week-tile">week6</a>
-                        <a role="listitem" href="week7.html" class="week-tile">week7</a>
-                        <a role="listitem" href="week8.html" class="week-tile">week8</a>
-                        <a role="listitem" href="week9.html" class="week-tile">week9</a>
-                        <a role="listitem" href="week10.html" class="week-tile">week10</a>
-                        <a role="listitem" href="week11.html" class="week-tile">week11</a>
-                        <a role="listitem" href="week12.html" class="week-tile">week12</a>
+                        <a role="listitem" href="week1.html" class="week-tile bg-white/6 text-current px-3 py-1 rounded-full font-semibold hover:bg-white/12 hover:-translate-y-1 transition-transform">week1</a>
+                        <a role="listitem" href="week2.html" class="week-tile bg-white/6 text-current px-3 py-1 rounded-full font-semibold hover:bg-white/12 hover:-translate-y-1 transition-transform">week2</a>
+                        <a role="listitem" href="week3.html" class="week-tile bg-white/6 text-current px-3 py-1 rounded-full font-semibold hover:bg-white/12 hover:-translate-y-1 transition-transform">week3</a>
+                        <a role="listitem" href="week4.html" class="week-tile bg-white/6 text-current px-3 py-1 rounded-full font-semibold hover:bg-white/12 hover:-translate-y-1 transition-transform">week4</a>
+                        <a role="listitem" href="week5.html" class="week-tile bg-white/6 text-current px-3 py-1 rounded-full font-semibold hover:bg-white/12 hover:-translate-y-1 transition-transform">week5</a>
+                        <a role="listitem" href="week6.html" class="week-tile bg-white/6 text-current px-3 py-1 rounded-full font-semibold hover:bg-white/12 hover:-translate-y-1 transition-transform">week6</a>
+                        <a role="listitem" href="week7.html" class="week-tile bg-white/6 text-current px-3 py-1 rounded-full font-semibold hover:bg-white/12 hover:-translate-y-1 transition-transform">week7</a>
+                        <a role="listitem" href="week8.html" class="week-tile bg-white/6 text-current px-3 py-1 rounded-full font-semibold hover:bg-white/12 hover:-translate-y-1 transition-transform">week8</a>
+                        <a role="listitem" href="week9.html" class="week-tile bg-white/6 text-current px-3 py-1 rounded-full font-semibold hover:bg-white/12 hover:-translate-y-1 transition-transform">week9</a>
+                        <a role="listitem" href="week10.html" class="week-tile bg-white/6 text-current px-3 py-1 rounded-full font-semibold hover:bg-white/12 hover:-translate-y-1 transition-transform">week10</a>
+                        <a role="listitem" href="week11.html" class="week-tile bg-white/6 text-current px-3 py-1 rounded-full font-semibold hover:bg-white/12 hover:-translate-y-1 transition-transform">week11</a>
+                        <a role="listitem" href="week12.html" class="week-tile bg-white/6 text-current px-3 py-1 rounded-full font-semibold hover:bg-white/12 hover:-translate-y-1 transition-transform">week12</a>
+                        <a role="listitem" href="week13.html" class="week-tile bg-white/6 text-current px-3 py-1 rounded-full font-semibold hover:bg-white/12 hover:-translate-y-1 transition-transform">week13
+                            
+                        </a>
                     </div>
                 </div>
             </nav>
@@ -41,14 +44,14 @@
 
         <main>
             <section class="hero">
-                <h1 class="hero-title">logboek<br>Lost in tra(i)nslation</h1>
+                <h1 class="hero-title text-6xl md:text-7xl font-extrabold leading-tight">logboek<br>Lost in tra(i)nslation</h1>
 
-                <div class="hero-side">Menno De Munter</div>
+                <div class="hero-side text-xl md:text-2xl font-medium">Menno De Munter</div>
             </section>
         </main>
 
             <footer class="site-footer">
-                <button type="button" class="footer-back" onclick="history.back()" aria-label="Ga terug">← terug</button>
+                <button type="button" class="footer-back mr-4 text-sm text-gray-600 hover:text-gray-800" onclick="history.back()" aria-label="Ga terug">← terug</button>
                 Menno De Munter — 
                 <a href="assets/Scherm­afbeelding 2025-12-04 om 16.52.34.png" download class="text-teal-300 hover:underline">download treinschermen</a>
                 —

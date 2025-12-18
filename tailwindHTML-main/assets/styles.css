@@ -186,7 +186,11 @@ body { padding-bottom: var(--site-footer-height); background-color: var(--p-ligh
 }
 
 /* Weeks carousel when used as a slim top nav */
-.weeks-top { position: absolute; top: 1.25rem; left: 50%; transform: translateX(-50%); z-index: 40; }
+.weeks-top { position: absolute; top: 3rem; left: 50%; transform: translateX(-50%); z-index: 40; }
+/* bring pills a bit higher on very small screens */
+@media (max-width: 480px) {
+    .weeks-top { top: 2rem; }
+}
 .weeks-top .weeks-track { display:flex; gap:0.75rem; align-items:center; }
 /* make the top pills readable on the dark start screen */
 .weeks-top .week-tile { background: rgba(255,255,255,0.06); color: var(--start-text); padding: 0.15rem 0.6rem; min-width: auto; border-radius: 9999px; font-weight:600; text-transform: none; border: 1px solid rgba(255,255,255,0.06); }

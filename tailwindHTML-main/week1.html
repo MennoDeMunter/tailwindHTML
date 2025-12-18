@@ -1,25 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tailwind Fonts Overview</title>
-  <link href="./dist/output.css" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles.css">
-  <link rel="stylesheet" href="assets/flexboxes.css">
-  <link rel="stylesheet" href="assets/nav.css">
-  <link rel="stylesheet" href="assets/typography.css">
-</head>
-<!DOCTYPE html>
-<html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Week 1 — LogBoek</title>
 
-        <!-- Tailwind CDN (development) -->
-        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- Built Tailwind stylesheet -->
+        <link href="./dist/output.css" rel="stylesheet">
 
+        <!-- Local CSS (overrides / custom components) -->
         <link rel="stylesheet" href="assets/styles.css">
         <link rel="stylesheet" href="assets/flexboxes.css">
         <link rel="stylesheet" href="assets/nav.css">
@@ -28,7 +17,7 @@
     <body class="site-brown text-teal-300 min-h-screen">
         <main class="max-w-4xl mx-auto p-6">
             <a href="index.html" class="inline-block mb-6 text-teal-600 font-semibold">← homepage</a>
-            <a href="week2.html" class="next-button" aria-label="Volgende week">Volgende →</a>
+            <a href="week2.html" class="next-button inline-block ml-auto bg-white text-gray-800 px-4 py-2 rounded shadow hover:bg-amber-50 transition-colors" aria-label="Volgende week">Volgende →</a>
 
             <h1 class="text-3xl font-extrabold mb-2">Mijn ervaring week 1.</h1>
             <h2 class="text-xl text-gray-700 mb-4">opdracht briefing</h2>
@@ -50,6 +39,7 @@ Hoewel de voortgang in week 1 minimaal was, heeft dit me wel inzicht gegeven in 
             <button type="button" class="footer-back" onclick="history.back()" aria-label="Ga terug">← terug</button>
             Menno De Munter — <a href="https://mennodemunter-ontwerpdocumentatie.netlify.app/" target="_blank" rel="noopener noreferrer" class="text-teal-300 hover:underline ml-3">GitHub</a>
         </footer>
+
         <script src="assets/modal.js" defer></script>
     </body>
 </html>

@@ -6,6 +6,9 @@
   <title>Contact Form</title>
 
   <!-- Your CSS files -->
+  <!-- Built Tailwind stylesheet -->
+  <link href="./dist/output.css" rel="stylesheet">
+
   <link rel="stylesheet" href="assets/styles.css">
   <link rel="stylesheet" href="assets/flexboxes.css">
   <link rel="stylesheet" href="assets/nav.css">
@@ -21,7 +24,7 @@
     </div>
 
     <div>
-      <ul class="vertical-buttons">
+  <ul class="vertical-buttons space-y-2">
         <li><a href="index.html">Page 1</a></li>
         <li><a href="page2.html">Page 2</a></li>
         <li><a href="page3.html">Page 3</a></li>
@@ -88,7 +91,7 @@
     });
   </script>
   <footer class="site-footer">
-    <button type="button" class="footer-back" onclick="history.back()" aria-label="Ga terug">← terug</button>
+    <button type="button" class="footer-back mr-4 text-sm text-gray-600 hover:text-gray-800" onclick="history.back()" aria-label="Ga terug">← terug</button>
     Menno De Munter — <a href="https://mennodemunter-ontwerpdocumentatie.netlify.app/" target="_blank" rel="noopener noreferrer" class="text-teal-300 hover:underline ml-3">GitHub</a>
   </footer>
   <script src="assets/modal.js" defer></script>
